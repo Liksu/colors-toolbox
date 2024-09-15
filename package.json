@@ -1,0 +1,14 @@
+{
+  "name": "colors-toolbox",
+  "version": "0.0.1",
+  "author": "Petro Borshchahivskyi",
+  "license": "MIT",
+  "description": "Toolset to work with colors - gradients, blend, convert, etc",
+  "homepage": "https://liksu.github.io/colors-toolbox",
+  "keywords": ["color", "gradient", "blend", "convert", "rgb", "hsl", "hex", "rgba", "hsla", "perlin", "noise", "spots", "pattern", "palette"],
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module"
+}
