@@ -1,6 +1,6 @@
-import { PerlinRGB } from '@/features/perlin-rgb'
+import type { PerlinRGB } from './perlin-rgb'
 
-function createBMP(width: number, height: number, pixelData: Uint8Array): ArrayBuffer {
+export function createBMP(width: number, height: number, pixelData: Uint8Array): ArrayBuffer {
     const fileHeaderSize = 14
     const dibHeaderSize = 40
     const bitsPerPixel = 24 // For RGB format
@@ -54,7 +54,7 @@ function createBMP(width: number, height: number, pixelData: Uint8Array): ArrayB
     return buffer
 }
 
-function base64ArrayBuffer(arrayBuffer: ArrayBuffer): string {
+export function base64ArrayBuffer(arrayBuffer: ArrayBuffer): string {
     const base64Chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
     const bytes = new Uint8Array(arrayBuffer)
     let base64 = ''

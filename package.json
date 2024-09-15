@@ -5,10 +5,56 @@
   "license": "MIT",
   "description": "Toolset to work with colors - gradients, blend, convert, etc",
   "homepage": "https://liksu.github.io/colors-toolbox",
-  "keywords": ["color", "gradient", "blend", "convert", "rgb", "hsl", "hex", "rgba", "hsla", "perlin", "noise", "spots", "pattern", "palette"],
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup",
+    "dev": "vitest",
+    "lint": "tsc",
+    "test": "vitest run",
+    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+    "local-release": "changeset version && changeset publish",
+    "prepublishOnly": "npm run ci",
+    "ci": "npm run build && npm run check-exports && npm run lint && npm run test"
   },
-  "type": "module"
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/liksu/colors-toolbox/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liksu/colors-toolbox.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "color",
+    "gradient",
+    "blend",
+    "convert",
+    "rgb",
+    "hsl",
+    "hex",
+    "rgba",
+    "hsla",
+    "perlin",
+    "noise",
+    "spots",
+    "pattern",
+    "palette"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": "./dist/index.js",
+      "default": "./dist/index.cjs"
+    }
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.16.2",
+    "@changesets/cli": "^2.27.8",
+    "tsup": "^8.2.4",
+    "typescript": "^5.6.2",
+    "vitest": "^2.1.1"
+  }
 }

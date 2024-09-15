@@ -1,5 +1,5 @@
-import { Perlin, PerlinMatrix } from '@/features/perlin'
-import { ColorHelpers, Gradient, HexColor, InputColorsPalette } from '@/features/color-helpers'
+import { ColorHelpers, type Gradient, type HexColor, type InputColorsPalette } from './color-helpers'
+import { Perlin, type PerlinMatrix } from './perlin'
 
 export type MatrixType = 'rgb' | 'rgba' | 'monochrome' | 'gradient'
 
