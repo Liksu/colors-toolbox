@@ -1,6 +1,6 @@
 {
   "name": "colors-toolbox",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Petro Borshchahivskyi",
   "license": "MIT",
   "description": "Toolset to work with colors - gradients, blend, convert, etc",
